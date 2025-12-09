@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false, // ⚠️ ВАЖНО: должно быть false для генерации .d.ts
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "declaration": true, // ✅ Генерировать .d.ts
+    "declarationDir": "./dist", // ✅ Папка для .d.ts
+    "emitDeclarationOnly": true, // ✅ Только типы, без JS
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue" // ⚠️ ВАЖНО: включить .vue файлы
+  ],
+  "exclude": ["node_modules", "dist"]
+}
