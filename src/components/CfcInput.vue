@@ -1,20 +1,20 @@
 <template>
-  <div class="my-input-wrapper">
-    <label v-if="label" :for="id" class="my-input-label">{{ label }}</label>
+  <div class="cfc-input-wrapper">
+    <label v-if="label" :for="id" class="cfc-input-label">{{ label }}</label>
     <input
       :id="id"
       :value="modelValue"
-      @input="$emit('update:modelValue', '1')"
+      @input="(e: Event) => $emit('update:modelValue', (e.target as HTMLInputElement)?.value)"
       :type="type"
       :placeholder="placeholder"
       :disabled="disabled"
-      :class="['my-input', { 'my-input--disabled': disabled }]"
+      :class="['cfc-input', { 'cfc-input--disabled': disabled }]"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-export interface MyInputProps {
+export interface CfcInputProps {
   modelValue: string
   label?: string
   id?: string
@@ -22,27 +22,23 @@ export interface MyInputProps {
   placeholder?: string
   disabled?: boolean
 }
-defineProps<MyInputProps>()
-
-defineEmits<{
-  (e: 'update:modelValue', value: string): void
-}>()
+defineProps<CfcInputProps>()
 </script>
 
 <style scoped>
-.my-input-wrapper {
+.cfc-input-wrapper {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.my-input-label {
+.cfc-input-label {
   font-weight: bold;
   font-size: 14px;
-  color: #333;
+  color: var(--color-primary);
 }
 
-.my-input {
+.cfc-input {
   padding: 8px 12px;
   border: 2px solid #ccc;
   border-radius: 6px;
@@ -50,11 +46,11 @@ defineEmits<{
   outline: none;
 }
 
-.my-input:focus {
+.cfc-input:focus {
   border-color: #007bff;
 }
 
-.my-input--disabled {
+.cfc-input--disabled {
   background-color: #f5f5f5;
   cursor: not-allowed;
 }

@@ -13,6 +13,7 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
+    "dev": "vite",
     "clean": "rimraf dist",
     "build:types": "vue-tsc --declaration --declarationDir ./dist --noEmit false",
     "build:lib": "vite build",

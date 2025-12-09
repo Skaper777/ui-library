@@ -1,4 +1,10 @@
-import MyInput from './components/MyInput.vue'
+import { createApp } from 'vue'
+import App from './App.vue'
+import CfcInput from './components/CfcInput.vue'
 
-export type { MyInputProps } from './components/MyInput.vue'
-export { MyInput }
+import './assets/variables.css'
+
+export type { CfcInputProps } from './components/CfcInput.vue'
+export { CfcInput }
+
+createApp(App).mount('#app')
