@@ -1,0 +1,142 @@
+/* ============ MODERN CSS RESET ============ */
+
+/* 1. Убираем внутренние отступы и границы у всех элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Удаляем стандартный стиль списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 3. Настраиваем основные HTML элементы */
+html {
+  /* Плавный скролл для якорей */
+  scroll-behavior: smooth;
+  
+  /* Более предсказуемый размер шрифта */
+  font-size: 100%;
+  
+  /* Улучшенное сглаживание текста */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Правильное направление текста */
+  text-rendering: optimizeLegibility;
+  
+  /* Корректное отображение на мобильных */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 4. Тело документа */
+body {
+  /* Минимальная высота на весь экран */
+  min-height: 100vh;
+  
+  /* Стандартная высота строки */
+  line-height: 1.5;
+  
+  /* Убираем горизонтальный скролл */
+  overflow-x: hidden;
+}
+
+/* 5. Изображения и медиа */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Наследование шрифтов для форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 7. Сброс стилей кнопок */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* 8. Убираем стандартное оформление ссылок */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 9. Сброс стилей таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* 10. Скрываем переполнение текста */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 11. Наследование цвета для SVG иконок */
+svg {
+  fill: currentColor;
+}
+
+/* 12. Убираем стандартные стрелки у input[type="number"] */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* 13. Убираем голубую подсветку при тапе на мобильных */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 14. Сброс для fieldset и legend */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/* 15. Улучшенное выделение текста */
+::selection {
+  background-color: rgba(0, 119, 255, 0.1);
+  color: inherit;
+}

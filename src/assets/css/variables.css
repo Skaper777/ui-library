@@ -1,0 +1,10 @@
+@import './fonts.css';
+
+:root {
+  /* Цвета */
+  --color-primary: #8B0000;
+  --color-secondary: #595959;
+
+  /* Шрифты */
+  --font-family-mtsans: 'MTSans', Arial, sans-serif;
+}

@@ -9,4 +9,8 @@ import MyInput from './components/CfcInput.vue'
 const test = ref('')
 </script>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  font-family: var(--font-family-mtsans);
+}
+</style>

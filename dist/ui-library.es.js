@@ -1,5 +1,5 @@
-import { defineComponent as d, createElementBlock as n, openBlock as p, createCommentVNode as r, createElementVNode as s, toDisplayString as u, normalizeClass as i, ref as c, Fragment as m, createVNode as f, createApp as b } from "vue";
-const _ = { class: "cfc-input-wrapper" }, v = ["for"], y = ["id", "value", "type", "placeholder", "disabled"], V = /* @__PURE__ */ d({
+import { defineComponent as d, createElementBlock as n, openBlock as p, createCommentVNode as u, createElementVNode as s, toDisplayString as i, normalizeClass as c, ref as m, Fragment as f, createVNode as b, createApp as _ } from "vue";
+const v = { class: "cfc-input-wrapper" }, y = ["for"], V = ["id", "value", "type", "placeholder", "disabled"], I = /* @__PURE__ */ d({
   __name: "CfcInput",
   props: {
     modelValue: {},
@@ -9,13 +9,13 @@ const _ = { class: "cfc-input-wrapper" }, v = ["for"], y = ["id", "value", "type
     placeholder: {},
     disabled: { type: Boolean }
   },
-  setup(o) {
-    return (e, t) => (p(), n("div", _, [
+  setup(a) {
+    return (e, t) => (p(), n("div", v, [
       e.label ? (p(), n("label", {
         key: 0,
         for: e.id,
         class: "cfc-input-label"
-      }, u(e.label), 9, v)) : r("", !0),
+      }, i(e.label), 9, y)) : u("", !0),
       s("input", {
         id: e.id,
         value: e.modelValue,
@@ -23,31 +23,31 @@ const _ = { class: "cfc-input-wrapper" }, v = ["for"], y = ["id", "value", "type
         type: e.type,
         placeholder: e.placeholder,
         disabled: e.disabled,
-        class: i(["cfc-input", { "cfc-input--disabled": e.disabled }])
-      }, null, 42, y)
+        class: c(["cfc-input", { "cfc-input--disabled": e.disabled }])
+      }, null, 42, V)
     ]));
   }
-}), C = (o, e) => {
-  const t = o.__vccOpts || o;
-  for (const [l, a] of e)
-    t[l] = a;
+}), r = (a, e) => {
+  const t = a.__vccOpts || a;
+  for (const [l, o] of e)
+    t[l] = o;
   return t;
-}, I = /* @__PURE__ */ C(V, [["__scopeId", "data-v-6ab5401b"]]), g = /* @__PURE__ */ d({
+}, C = /* @__PURE__ */ r(I, [["__scopeId", "data-v-6ab5401b"]]), g = /* @__PURE__ */ d({
   __name: "App",
-  setup(o) {
-    const e = c("");
-    return (t, l) => (p(), n(m, null, [
+  setup(a) {
+    const e = m("");
+    return (t, l) => (p(), n(f, null, [
       l[1] || (l[1] = s("h1", null, "You did it!", -1)),
-      f(I, {
+      b(C, {
         label: "test",
         modelValue: e.value,
-        "onUpdate:modelValue": l[0] || (l[0] = (a) => e.value = a),
+        "onUpdate:modelValue": l[0] || (l[0] = (o) => e.value = o),
         id: "1"
       }, null, 8, ["modelValue"])
     ], 64));
   }
-});
-b(g).mount("#app");
+}), h = /* @__PURE__ */ r(g, [["__scopeId", "data-v-a21f89f5"]]);
+_(h).mount("#app");
 export {
-  I as CfcInput
+  C as CfcInput
 };
